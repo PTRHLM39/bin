@@ -1,0 +1,133 @@
+* shell-script
+*VIM shell-script environment*
+
+Bash-support plugin for vim-editor.
+Makes shell-scripting more fun, easy and instructive.
+** Installation
+Find out more about bash-support and other usefull plugins at https://github.com/WolfgangMehner/vim-plugins
+** Hotkeys
+/(i) insert mode, (n) normal mode, (v) visual mode/
+*** Help
+|--------+---------------------+-------|
+| *Help* |                     |       |
+|--------+---------------------+-------|
+| =\hb=  | Fetch bash man page | (n,i) |
+|--------+---------------------+-------|
+*** Bash
+|--------+------------------------+--------|
+| *Bash* |                        |        |
+|--------+------------------------+--------|
+| =\bps= | parameter substitution | (n, i) |
+| =\bsp= | special parameters     | (n, i) |
+| =\ben= | environment            | (n, i) |
+| =\bbu= | built-in               | (n, i) |
+| =\bse= | set options            | (n, i) |
+| =\bso= | shopts                 | (n, i) |
+|--------+------------------------+--------|
+*** Comment
+|-----------+------------------------------+-----------|
+| *Comment* |                              |           |
+|-----------+------------------------------+-----------|
+| =[n]\cl=  | end-of-line comment          | (n, i, v) |
+| =[n]\cj=  | adjust end-of-line comment   | (n, i, v) |
+| =\cs=     | set end-of line comment col  | (n)       |
+| =[n]\cc=  | code -> comment              | (n, i, v) |
+| =[n]\co=  | uncomment code               | (n, i, v) |
+| =\cfr=    | frame comment                | (n, i)    |
+| =\cfu=    | function description         | (n, i)    |
+| =\ch=     | file header                  | (n, i)    |
+| =\cd=     | date                         | (n, i)    |
+| =\ct=     | date & time                  | (n, i)    |
+| =\css=    | script section               | (n, i)    |
+| =\ckc=    | keyword comment              | (n, i)    |
+| =\cma=    | plug-in macros               | (n, i)    |
+| =\ce=     | echo "actual line"           | (n, i)    |
+| =\cr=     | remove echo from actual line | (n, i)    |
+|-----------+------------------------------+-----------|
+*** Statements
+|--------------+-----------------------------+-----------|
+| *Statements* |                             |           |
+|--------------+-----------------------------+-----------|
+| =\sc=        | case in ... esac            | (n, i)    |
+| =\sei=       | elif then                   | (n, i)    |
+| =\sf=        | for in do done              | (n, i, v) |
+| =\sfo=       | for ((...)) do done         | (n, i ,v) |
+| =\si=        | if then fi                  | (n, i, v) |
+| =\sie=       | if then else fi             | (n, i, v) |
+| =\ss=        | select in do done           | (n, i, v) |
+| =\su=        | until do done               | (n, i, v) |
+| =\sw=        | while do done               | (n, i, v) |
+| =\sfu=       | function                    | (n, i, v) |
+| =\se=        | echo -e ""                  | (n, i, v) |
+| =\sp=        | printf "%s\n"               | (n, i, v) |
+| =\sae=       | arrey element ${.[.]}       | (n, i, v) |
+| =\saa=       | arr.elem.s (all) ${.[@]}    | (n, i, v) |
+| =\sas=       | arr.elem.s (1 word) ${.[*]} | (n, i, v) |
+| =\ssa=       | subarrey ${.[@]::}          | (n, i, v) |
+| =\san=       | no. of arr.elem.s ${.[@]}   | (n, i, v) |
+| =\sai=       | list of indices ${.[*]}     | (n, i, v) |
+|--------------+-----------------------------+-----------|
+*** Tests
+|---------+---------------------------------+--------|
+| *Tests* |                                 |        |
+|---------+---------------------------------+--------|
+| =\ta=   | arithmetic tests                | (n, i) |
+| =\tfp=  | file permissions                | (n, i) |
+| =\tft=  | file types                      | (n, i) |
+| =\tfc=  | file characteristics            | (n, i) |
+| =\ts=   | string comparsion               | (n, i) |
+| =\toe=  | option is enabled               | (n, i) |
+| =\tvs=  | variable has been set           | (n, i) |
+| =tfd=   | file descr refers to a terminal | (n, i) |
+| =\tm=   | string matches regexp           | (n, i) |
+|---------+---------------------------------+--------|
+*** IO
+|------------------+-----------------+--------|
+| *IO-redirection* |                 |        |
+|------------------+-----------------+--------|
+| =\ior=           | IO-redirections | (n, i) |
+| =\ioh=           | here-document   | (n, i) |
+|------------------+-----------------+--------|
+*** Pattern
+|--------------------+-----------------------+--------|
+| *Pattern Matching* |                       |        |
+|--------------------+-----------------------+--------|
+| =\pzo=             | zero or one, ?(  )    | (n, i) |
+| =\pzm=             | zero or more *(  )    | (n, i) |
+| =\pom=             | one or more           | (n, i) |
+| =\peo=             | exactly one           | (n, i) |
+| =\pae=             | anything except       | (n, i) |
+| =\ppc=             | POSIX classes         | (n, i) |
+| =\pbr=             | ${BASH_REMATCH[0..3]} | (n, i) |
+|--------------------+-----------------------+--------|
+*** Snippets
+|------------+-------------------------+-----------|
+| *Snippets* |                         |           |
+|------------+-------------------------+-----------|
+| =\nr=      | read code snippet       | (n, i)    |
+| =\nv=      | view code snippet       | (n, i)    |
+| =\nw=      | write code snippet      | (n, i, v) |
+| =\ne=      | edit code snippet       | (n, i)    |
+| =\ntl=     | edit local templates    | (n, i)    |
+| =\ntc=     | edit custom templates   | (n, i)    |
+| =\ntp=     | edit personal templates | (n, i)    |
+| =\ntr=     | reread the templates    | (n, i)    |
+| =\ntw=     | template setup wizard   | (n, i)    |
+| =\nts=     | choose style            | (n, i)    |
+|------------+-------------------------+-----------|
+*** Run
+|--------+--------------------------------+-----------|
+| *Run*  |                                |           |
+|--------+--------------------------------+-----------|
+| =\rr=  | update file, run script        | (n, i, v) |
+| =\ra=  | set script cmd, line arguments | (n, i)    |
+| =\rba= | set Bash cmd. line arguments   | (n, i)    |
+| =\rc=  | update file, check syntax      | (n, i)    |
+| =\rco= | syntax check options           | (n, i)    |
+| =\rd=  | start debugger                 | (n, i)    |
+| =\re=  | toggle file executable         | (n, i)    |
+| =\rh=  | hardcopy buffer                | (n, i)    |
+| =\rs=  | plug-in settings               | (n, i)    |
+| =\ro=  | change output destination      | (n, i)    |
+|--------+--------------------------------+-----------|
+
